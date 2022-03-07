@@ -1,0 +1,11 @@
+<div>
+  <h3>Page 2</h3>
+  <div class="persons">
+    <ng-container *ngIf="persons$ | async as persons">
+      <div class="person" *ngFor="let person of persons">
+        <span>{{ person.id }} - {{ person.name }} {{ person.lastname }}</span>
+        <button (click)="remove(person)">Remove</button>
+      </div>
+    </ng-container>
+  </div>
+</div>
